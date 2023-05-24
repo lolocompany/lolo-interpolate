@@ -5,7 +5,7 @@
  ***************************************************************/
 
 
-const { get } = require('lodash');
+const { get, isArray, reduce } = require('lodash');
 
 const interpolate = (ctx, params) => {
     return deepMap(params, val => interpolateOne(ctx, val));

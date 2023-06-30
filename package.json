@@ -2,9 +2,11 @@
   "name": "lolo-interpolate",
   "version": "1.0.0",
   "description": "Shared logic between engine and API",
-  "main": "index.js",
+  "main": "./dist/main.js",
+  "types": "./dist/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "vitest run --coverage"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,11 @@
   "homepage": "https://github.com/lolocompany/interpolate#readme",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.195",
+    "@vitest/coverage-v8": "^0.32.2",
+    "typescript": "^5.1.6",
+    "vitest": "^0.32.2"
   }
 }

@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Array > Empty context 1`] = `
+[
+  "{x.y}",
+  "{x.y}",
+]
+`;
+
+exports[`Array > Exact match context 1`] = `
+[
+  "Hello",
+  "Hello",
+]
+`;
+
+exports[`Array > Full context 1`] = `
+[
+  "Hello",
+  "Hello",
+]
+`;
+
+exports[`Array > No match context 1`] = `
+[
+  "{x.y}",
+  "{x.y}",
+]
+`;

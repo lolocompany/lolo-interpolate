@@ -68,3 +68,8 @@ const deepMap = (target: unknown, fn: (val: unknown) => unknown): unknown => {
 };
 
 export default interpolate;
+
+// For compatibility with the original JS implementation
+module.exports = interpolate;
+module.exports.interpolate = interpolate;
+module.exports.default = interpolate;

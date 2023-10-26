@@ -6,7 +6,9 @@
   "types": "./dist/main.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "vitest run --coverage"
+    "test": "vitest run --coverage",
+    "demo:ts": "ts-node ./demo/main.ts",
+    "demo:js": "ts-node ./demo/main.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.195",
     "@vitest/coverage-v8": "^0.32.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "vitest": "^0.32.2"
   }

@@ -48,8 +48,10 @@ const deepMap = (target, fn) => {
     if (Array.isArray(target)) {
         return target.map(i => deepMap(i, fn));
     }
-    if (typeof target !== 'object')
+    if (typeof target !== 'object') {
         return fn(target);
+    }
+    ;
     return (0, lodash_1.reduce)(target, (memo, v, k) => {
         memo[k] = typeof v === 'object' ?
             deepMap(v, fn) :
@@ -58,4 +60,8 @@ const deepMap = (target, fn) => {
     }, {});
 };
 exports.default = exports.interpolate;
+// For compatibility with the original JS implementation
+module.exports = exports.interpolate;
+module.exports.interpolate = exports.interpolate;
+module.exports.default = exports.interpolate;
 //# sourceMappingURL=main.js.map

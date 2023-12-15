@@ -1,5 +1,5 @@
 {
-  "name": "lolo-interpolate",
+  "name": "@lolocompany/lolo-interpolate",
   "version": "1.0.0",
   "description": "Shared logic between engine and API",
   "main": "./dist/main.js",
@@ -8,7 +8,9 @@
     "build": "tsc",
     "test": "vitest run --coverage",
     "demo:ts": "ts-node ./demo/main.ts",
-    "demo:js": "ts-node ./demo/main.js"
+    "demo:js": "ts-node ./demo/main.js",
+    "prepublishOnly": "npm run build && npm run test && npm run aws:login",
+    "aws:login": "aws codeartifact login --tool npm --repository Nodejs --domain lolo --domain-owner 745798769136 --region eu-north-1 --profile lolo-ops-PowerUserAccess"
   },
   "repository": {
     "type": "git",

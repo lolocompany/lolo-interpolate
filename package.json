@@ -1,6 +1,6 @@
 {
   "name": "@lolocompany/lolo-interpolate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared logic between engine and API",
   "main": "./dist/main.js",
   "types": "./dist/main.d.ts",
